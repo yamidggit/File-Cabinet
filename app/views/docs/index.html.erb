@@ -1,0 +1,6 @@
+<%@docs.each do |doc| %>
+    <h2><%=link_to doc.title, doc_path(doc.id)%></h2>
+    <p><%=time_ago_in_words(doc.created_at)%></p> <!--  this is coming from timestamps and it will show the timw when the doc was created -->
+    <p><%=truncate(doc.content, length:50)%></p> <!--  to show just the 50 first characters -->
+    
+<%end%>

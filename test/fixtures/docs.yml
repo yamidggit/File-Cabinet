@@ -2,8 +2,8 @@
 
 one:
   title: MyString
-  context: MyText
+  content: MyText
 
 two:
   title: MyString
-  context: MyText
+  content: MyText
