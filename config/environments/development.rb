@@ -52,5 +52,5 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 } #this is for the mailing in case that the user fotget the password to sign in(devise) 
+  #config.action_mailer.default_url_options = { host: 'https://ruby-on-rails-yamidgc9.c9users.io', port: 8080 } #this is for the mailing in case that the user fotget the password to sign in(devise) 
 end
