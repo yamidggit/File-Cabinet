@@ -2,7 +2,7 @@ class DocsController < ApplicationController
     before_action :find_doc, only:[:show, :edit, :update, :destroy]
     
     def index
-        @docs=Doc.all.order("created_at DESC") #this put documents in the orther they were created(newest at the top)
+        @docs= Doc.where(user_id: current_user)
     end
 
     def new
