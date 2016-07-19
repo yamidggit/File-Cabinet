@@ -1,2 +1,27 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<section id="banner">
+    <div class = "banner_content">
+        <h1>File Cabinet</h1>
+        <p>Your life's work. Organized, always.</p>
+        <button><%= link_to "Enter", new_user_registration_path %></button>
+    <div>
+</section>
+<section id="callouts">
+    <div class= "callout_inner">
+        <div class= "wrapper">
+            <div class = "callout">
+                <h2>Organize</h2>
+                <p>Aliquam ut arcu sit amet magna volutpat tempor tristique
+                a mauris. Praesent ac elit dolor. Aenean odio magna, pretium 
+                bibendum erat sit amet, tincidunt commodo dolor. Maecenas eget
+                nisl condimentum, elementum dui ut, dignissim tellus.
+            <div>
+        </div>
+    </div>
+</section>
+<section id="bottom_cta">
+    <div class = "wrapper">
+        <h2>Go Ahead!</h2>
+        </br>
+        <button><%= link_to "Join Now", new_user_registration_path %></button>
+    <div>
+</section>

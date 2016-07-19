@@ -1,0 +1,8 @@
+/*
+ *= require_self
+ */
+
+@import 'normalize'; /*this will reset the browser. Normalize.css makes browsers render all elements more consistently and in line with modern standards. */
+@import "global.css.scss";
+@import "docs.css.scss";
+@import "welcome.css.scss";
