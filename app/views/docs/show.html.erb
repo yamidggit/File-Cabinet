@@ -1,6 +1,13 @@
-<h1><%= @doc.title%></h1>
-<p><%= @doc.content%></p>
-
-<p><%= link_to "All Docs", docs_path%></p>
-<p><%= link_to "Fix Doc", edit_doc_path(@doc)%></p>
-<p><%= link_to "Trash It", doc_path(@doc), method: :delete, data: {confirm: "Are you sure?" } %></p>
+<section id= "doc_show" class= "wrapper_with_padding ">
+    <h1 class="title"><%= @doc.title%></h1>
+    
+    <!--Returns text transformed into HTML using simple formatting rules.
+    Two \n\n are considered as a paragraph and wrapped in <p>. One newline (\n)
+    is considered as a linebreak and a <br /> tag is appended.-->
+    
+    <p><%= simple_format(@doc.content)%></p> 
+    <div class ="buttons">
+        <%= link_to "Fix Doc", edit_doc_path(@doc), class: "button"%>
+        <%= link_to "Trash It", doc_path(@doc), method: :delete, data: {confirm: "Are you sure?" }, class: "button"%>
+    </div>    
+</section>

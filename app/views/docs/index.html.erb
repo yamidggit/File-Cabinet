@@ -1,8 +1,17 @@
-<%@docs.each do |doc| %>
-    <h2><%=link_to doc.title, doc_path(doc.id)%></h2>
-    <p><%=time_ago_in_words(doc.created_at)%></p> <!--  this is coming from timestamps and it will show the timw when the doc was created -->
-    <p><%=truncate(doc.content, length:50)%></p> <!--  to show just the 50 first characters -->
-    
-<%end%>
-
-<p><%= link_to "Create Doc", new_doc_path%></p>
+<section id= "docs" class= "wrapper_with_padding clearfix">
+    <%unless @docs.blank?%>
+        <%@docs.each do |doc| %>
+            <%=link_to doc_path(doc.id) do %> <!--This will surround the div with <a> tags making everithing a link-->
+                <div class="doc">
+                    <p class="title"><%=doc.title%></p>
+                    <p class="date"><%=time_ago_in_words(doc.created_at)%></p> <!--  this is coming from timestamps and it will show the timw when the doc was created -->
+                    <p class="content"><%=truncate(doc.content, length:50)%></p> <!--  to show just the 50 first characters -->
+                </div>
+            <%end%>
+        <%end%>
+    <%else%>
+        <h2>Create Doc!</h2>
+        <p>Start Creating documents and Organizing your life!</p>
+        <button><%= link_to "Create Doc", new_doc_path%></button>
+    <%end%>
+</section>
