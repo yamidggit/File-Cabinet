@@ -2,12 +2,8 @@
 // STYLING FOR WELCOME PAGE
 
 #banner {
-	background-image: url(image_path("welcome_banner_image.jpg"));
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: top center;
 	width: 100%;
-	min-height: 500px;
+	min-height: 450px;
 	display: table;
 	.banner_content {
 		display: table-cell;
@@ -44,13 +40,14 @@
 }
 
 #callouts {
-	background-image: url("images/callout_background.png");
+	background-image: url(image_path("callout_backgroung.jpg"));
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: top center;
 	width: 100%;
 	min-height: 500px;
 	display: table;
+    
 	.callout_inner {
 		display: table-cell;
 		vertical-align: middle;
@@ -62,18 +59,17 @@
 		float: left;
 		h2 {
 			@include bold_font;
-			/*color: white; put this back when the image will be display*/
-			color: black;
+			color: white;
 			margin-bottom: 0;
 		}
 		p {
-			color: black;
-			/*color: rgba(255, 255, 255, 0.9);*/
+			color: rgba(255, 255, 255, 0.9);
 		}
 	}
 }
 
 #bottom_cta {
+	min-height: 450px;
 	text-align: center;
 	padding: 7.5rem 0;
 	h2 {
